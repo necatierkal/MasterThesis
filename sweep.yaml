@@ -1,0 +1,36 @@
+method: bayes
+metric:
+goal: maximize
+name: score
+parameters:
+DROPOUT_RATE:
+max: 1.2
+min: 0.05
+EMBEDDING_DIM:
+max: 128
+min: 32
+EPOCHS:
+max: 24
+min: 6
+GRADIENT_ACCUMULATION:
+max: 2
+min: 1
+HIDDEN_DIM:
+max: 2048
+min: 512
+LR:
+distribution: uniform
+max: 0.002
+min: 5e-05
+TRAIN_BATCH_SIZE:
+max: 512
+min: 128
+WORKERS:
+max: 16
+min: 4
+optimizer:
+values: ["Adam", "SGD", "AdamW", "NAdam", "RMSprop", "Adagrad", "Adadelta"]
+loss_fct:
+values: ["CrossEntropyLoss", "MSELoss", "TripletMarginLoss", "HingeEmbeddingLoss", "BCEWithLogitsLoss"]
+program: MLP-SMF.py
+

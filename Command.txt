@@ -1,0 +1,12 @@
+wandb sweep --update nect/mlp-smf/t3nzsl2m sweep.yaml
+
+
+To change your sweep configuration, download your configuration file and save it as sweep.yaml.
+
+Modify it as you like then run the command below to upload the new configuration.
+
+wandb sweep --update nect/mlp-smf/t3nzsl2m sweep.yaml
+Check out our docs for more information.
+
+
+
