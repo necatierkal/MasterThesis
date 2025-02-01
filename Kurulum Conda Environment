@@ -1,0 +1,28 @@
+
+chmod -v +x Miniconda*.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
+chmod -v +x Miniconda*.sh
+echo "HASH_OF_INSTALLER *INSTALLER_SCRIPT_NAME" | shasum --check
+echo "78f39f9bae971ec1ae7969f0516017f2413f17796670f7040725dd83fcff5689 *Miniconda3-py39_4.12.0-Linux-x86_64.sh" | shasum --check
+echo "78f39f9bae971ec1ae7969f0516017f2413f17796670f7040725dd83fcff5689 *Miniconda3-py39_4.12.0-Linux-x86_64.sh" | shasum --check
+echo "78f39f9bae971ec1ae7969f0516017f2413f17796670f7040725dd83fcff5689 *Miniconda3-py39_4.12.0-Linux-x86_64.sh" | shasum --check
+./Miniconda3-py39_4.12.0-Linux-x86_64.sh
+if ! [[ $PATH =~ "$HOME/miniconda3/bin" ]]; then
+  PATH="$HOME/miniconda3/bin:$PATH"
+fi
+conda init bash
+conda init zsh
+source ~/.bashrc  # Bash kullanıyorsanız
+source ~/.zshrc   # Zsh kullanıyorsanız
+
+
+Command
+conda create --solver=libmamba -n rapids-pytorch-cu12 -c rapidsai -c pytorch-nightly -c conda-forge -c nvidia rapids=23.08 cuda-version=12.0 pytorch pytorch-cuda=12.1
+
+solver hata verirse sil.
+
+conda create -n rapids-pytorch-cu12 -c rapidsai -c pytorch-nightly -c conda-forge -c nvidia rapids=23.08 cuda-version=12.0 pytorch pytorch-cuda=12.1
+
+jupyter nbconvert --to script GRU-MS-SMF.ipynb
+
+
