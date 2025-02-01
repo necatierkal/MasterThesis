@@ -10,8 +10,6 @@ Install the CLI and Python library for interacting with the Weights and Biases A
 
 Kodu Çalıştırmak İçin;
 
-Kodu Çalıştırmak İçin;
-
 1- Kodun çalışacağı dizine boş checkpoints klasörü oluşturulmalı
 2- 01_Data isminde bir klasör oluşturularak csv dosyalarından oluşan data içerisine konulmalı
 3- MLP-SMF.py dosyası 01_Data ve checkpoints klasörleri aynı dizine konulmalı.(Eşit hiyerarşide)
