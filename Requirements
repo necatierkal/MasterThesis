@@ -13,9 +13,6 @@ Kodu Çalıştırmak İçin;
 1- Kodun çalışacağı dizine boş checkpoints klasörü oluşturulmalı
 2- 01_Data isminde bir klasör oluşturularak csv dosyalarından oluşan data içerisine konulmalı
 3- MLP-SMF.py dosyası 01_Data ve checkpoints klasörleri aynı dizine konulmalı.(Eşit hiyerarşide)
-
-
-
 4- Öncesinde oluşturulan conda environment aktif edilmeli 
 (conda activate rapids-pytorch-cu12)
 
