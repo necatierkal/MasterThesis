@@ -1,0 +1,28 @@
+WanDB Kurulum 
+
+Install the CLI and Python library for interacting with the Weights and Biases API.
+1- pip install wandb
+2- wandb login
+3- Your API key for logging in to the wandb library. (Üyelik oluşturduktan sonra kendi profil sayfanızdan api key buraya girilmeli)
+4- Koda entegrasyon benim koddan wandb aratarak aynı entegrasyon yapılmalı.
+5- Train esnasında size bir link gelecek sonuçları oradan anlık takip edebilirsiniz.
+
+
+Kodu Çalıştırmak İçin;
+
+Kodu Çalıştırmak İçin;
+
+1- Kodun çalışacağı dizine boş checkpoints klasörü oluşturulmalı
+2- 01_Data isminde bir klasör oluşturularak csv dosyalarından oluşan data içerisine konulmalı
+3- MLP-SMF.py dosyası 01_Data ve checkpoints klasörleri aynı dizine konulmalı.(Eşit hiyerarşide)
+
+
+
+4- Öncesinde oluşturulan conda environment aktif edilmeli 
+(conda activate rapids-pytorch-cu12)
+
+5- Terminalde normal run için python komutuyla ; hyper parameter tununing için , 
+
+wandb agent nect/n_MLP_SMF/hb8w44oz --count 10 
+
+komutuyla (Bu komut yine aynı dizine konulan .yaml uzantılı dosya içerisindeki parametrelerde bayes ile seçim yaparak 10 kez kodu baştan sona çalıştırır. )
